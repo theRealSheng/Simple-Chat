@@ -1,32 +1,55 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+body {
+  font-family: "Press Start 2P";
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "sidebar main";
+  width: 90vw;
+  height: 95vh;
+  margin: 2em;
+  padding: 0 2em;
+  border: 1px green solid;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+#main {
+  grid-area: main;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#new-message {
+  position: fixed;
+  bottom: 0;
+  width: 65%;
+  height: 7em;
+  padding: 1em;
+  margin-left: 0px;
+  border-top: 1px solid #3f3f3f;
+}
+
+.new-message {
+  width: 100%;
+  height: 60%;
+}
+
+#messages-list {
+  padding: 5px 0 0 5px;
+  padding-top: 1em;
+}
+
+#sidebar {
+  grid-area: sidebar;
+  padding: 5px 0 0 5px;
+  border-right: 1px solid #3f3f3f;
+  height: 100%;
+  padding-top: 1em;
 }
